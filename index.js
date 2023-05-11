@@ -8,6 +8,16 @@ let users = [
   { id: 3, name: "Charlie", email: "charlie@example.com" },
 ];
 
+app.get("/", (req, res) => {
+  res.send(`Welcome to home page of req_res 
+       Choose any of the following 
+       1.GET /api/users 
+       2.GET /api/users/:id
+       3. POST /api/users
+       4.PUT /api/users/:id
+       5.DELETE /api/users/:id`);
+});
+
 // GET request to get all users
 app.get("/api/users", (req, res) => {
   res.json(users);
